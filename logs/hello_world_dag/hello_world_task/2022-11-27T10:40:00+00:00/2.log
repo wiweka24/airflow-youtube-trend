@@ -1,0 +1,23 @@
+[2022-11-27T10:59:02.185+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: hello_world_dag.hello_world_task scheduled__2022-11-27T10:40:00+00:00 [queued]>
+[2022-11-27T10:59:02.375+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: hello_world_dag.hello_world_task scheduled__2022-11-27T10:40:00+00:00 [queued]>
+[2022-11-27T10:59:02.382+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-27T10:59:02.431+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 4
+[2022-11-27T10:59:02.453+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-27T10:59:02.576+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): hello_world_task> on 2022-11-27 10:40:00+00:00
+[2022-11-27T10:59:02.586+0000] {standard_task_runner.py:55} INFO - Started process 218 to run task
+[2022-11-27T10:59:02.709+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'hello_world_dag', 'hello_world_task', 'scheduled__2022-11-27T10:40:00+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/dag_helloworld.py', '--cfg-path', '/tmp/tmpw570asrz']
+[2022-11-27T10:59:02.738+0000] {standard_task_runner.py:83} INFO - Job 277: Subtask hello_world_task
+[2022-11-27T10:59:04.706+0000] {task_command.py:376} INFO - Running <TaskInstance: hello_world_dag.hello_world_task scheduled__2022-11-27T10:40:00+00:00 [running]> on host 3a447a80b3bb
+[2022-11-27T10:59:08.870+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Ranga
+AIRFLOW_CTX_DAG_ID=hello_world_dag
+AIRFLOW_CTX_TASK_ID=hello_world_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-27T10:40:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-27T10:40:00+00:00
+[2022-11-27T10:59:08.904+0000] {python.py:177} INFO - Done. Returned value was: Hello World!
+[2022-11-27T10:59:09.441+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=hello_world_dag, task_id=hello_world_task, execution_date=20221127T104000, start_date=20221127T105902, end_date=20221127T105909
+[2022-11-27T10:59:10.112+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-11-27T10:59:10.281+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

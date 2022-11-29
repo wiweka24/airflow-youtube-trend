@@ -1,0 +1,6 @@
+/dags/__pycache__
+/logs
+/plugins/__pycache__
+/plugins/operators/__pycache__
+
+.env

@@ -1,0 +1,22 @@
+[2022-11-28T16:30:09.048+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_try_oop.transformYtApiOperator scheduled__2022-11-28T03:00:00+00:00 [queued]>
+[2022-11-28T16:30:09.311+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_try_oop.transformYtApiOperator scheduled__2022-11-28T03:00:00+00:00 [queued]>
+[2022-11-28T16:30:09.318+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-28T16:30:09.329+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2022-11-28T16:30:09.338+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-28T16:30:09.894+0000] {taskinstance.py:1383} INFO - Executing <Task(transformYtApiOperator): transformYtApiOperator> on 2022-11-28 03:00:00+00:00
+[2022-11-28T16:30:10.099+0000] {standard_task_runner.py:55} INFO - Started process 627 to run task
+[2022-11-28T16:30:10.193+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_try_oop', 'transformYtApiOperator', 'scheduled__2022-11-28T03:00:00+00:00', '--job-id', '818', '--raw', '--subdir', 'DAGS_FOLDER/dag_try_oop.py', '--cfg-path', '/tmp/tmpt11nfdjd']
+[2022-11-28T16:30:10.225+0000] {standard_task_runner.py:83} INFO - Job 818: Subtask transformYtApiOperator
+[2022-11-28T16:30:11.161+0000] {task_command.py:376} INFO - Running <TaskInstance: dag_try_oop.transformYtApiOperator scheduled__2022-11-28T03:00:00+00:00 [running]> on host 1dd759b3e30c
+[2022-11-28T16:30:12.043+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_try_oop
+AIRFLOW_CTX_TASK_ID=transformYtApiOperator
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T03:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-28T03:00:00+00:00
+[2022-11-28T16:30:12.565+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag_try_oop, task_id=transformYtApiOperator, execution_date=20221128T030000, start_date=20221128T163009, end_date=20221128T163012
+[2022-11-28T16:30:12.821+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-11-28T16:30:13.278+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

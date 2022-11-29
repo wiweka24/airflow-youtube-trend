@@ -1,0 +1,26 @@
+[2022-11-28T11:44:45.854+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_try_oop.getDataToLocal manual__2022-11-28T11:44:44.008278+00:00 [queued]>
+[2022-11-28T11:44:45.867+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_try_oop.getDataToLocal manual__2022-11-28T11:44:44.008278+00:00 [queued]>
+[2022-11-28T11:44:45.868+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-28T11:44:45.868+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2022-11-28T11:44:45.868+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-28T11:44:45.897+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): getDataToLocal> on 2022-11-28 11:44:44.008278+00:00
+[2022-11-28T11:44:45.909+0000] {standard_task_runner.py:55} INFO - Started process 1490 to run task
+[2022-11-28T11:44:45.924+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_try_oop', 'getDataToLocal', 'manual__2022-11-28T11:44:44.008278+00:00', '--job-id', '574', '--raw', '--subdir', 'DAGS_FOLDER/dag_try_oop.py', '--cfg-path', '/tmp/tmpdbtgaw61']
+[2022-11-28T11:44:45.930+0000] {standard_task_runner.py:83} INFO - Job 574: Subtask getDataToLocal
+[2022-11-28T11:44:46.048+0000] {task_command.py:376} INFO - Running <TaskInstance: dag_try_oop.getDataToLocal manual__2022-11-28T11:44:44.008278+00:00 [running]> on host 32dc5aa7602c
+[2022-11-28T11:44:46.143+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_try_oop
+AIRFLOW_CTX_TASK_ID=getDataToLocal
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T11:44:44.008278+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-28T11:44:44.008278+00:00
+[2022-11-28T11:44:48.076+0000] {logging_mixin.py:137} INFO - Writing ID data to file...
+[2022-11-28T11:44:50.371+0000] {logging_mixin.py:137} INFO - Writing EG data to file...
+[2022-11-28T11:45:05.879+0000] {logging_mixin.py:137} INFO - Writing GB data to file...
+[2022-11-28T11:45:05.897+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-11-28T11:45:05.930+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag_try_oop, task_id=getDataToLocal, execution_date=20221128T114444, start_date=20221128T114445, end_date=20221128T114505
+[2022-11-28T11:45:06.017+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-11-28T11:45:06.115+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

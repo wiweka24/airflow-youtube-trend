@@ -1,0 +1,103 @@
+[2022-11-28T09:06:50.403+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_youtube_api.getDataToLocal manual__2022-11-28T09:00:48.969051+00:00 [queued]>
+[2022-11-28T09:06:50.482+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_youtube_api.getDataToLocal manual__2022-11-28T09:00:48.969051+00:00 [queued]>
+[2022-11-28T09:06:50.487+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-28T09:06:50.488+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2022-11-28T09:06:50.489+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-28T09:06:50.523+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): getDataToLocal> on 2022-11-28 09:00:48.969051+00:00
+[2022-11-28T09:06:50.535+0000] {standard_task_runner.py:55} INFO - Started process 1835 to run task
+[2022-11-28T09:06:50.554+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_youtube_api', 'getDataToLocal', 'manual__2022-11-28T09:00:48.969051+00:00', '--job-id', '533', '--raw', '--subdir', 'DAGS_FOLDER/dag_youtube_api.py', '--cfg-path', '/tmp/tmpsw4n8791']
+[2022-11-28T09:06:50.557+0000] {standard_task_runner.py:83} INFO - Job 533: Subtask getDataToLocal
+[2022-11-28T09:06:50.684+0000] {task_command.py:376} INFO - Running <TaskInstance: dag_youtube_api.getDataToLocal manual__2022-11-28T09:00:48.969051+00:00 [running]> on host 8af950e53524
+[2022-11-28T09:06:50.873+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_youtube_api
+AIRFLOW_CTX_TASK_ID=getDataToLocal
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T09:00:48.969051+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-28T09:00:48.969051+00:00
+[2022-11-28T09:06:53.394+0000] {logging_mixin.py:137} INFO - Writing ID data to file...
+[2022-11-28T09:07:13.950+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 424, in connect
+    tls_in_tls=tls_in_tls,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/ssl_.py", line 450, in ssl_wrap_socket
+    sock, context, tls_in_tls, server_hostname=server_hostname
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.7/ssl.py", line 423, in wrap_socket
+    session=session
+  File "/usr/local/lib/python3.7/ssl.py", line 870, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.7/ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 424, in connect
+    tls_in_tls=tls_in_tls,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/ssl_.py", line 450, in ssl_wrap_socket
+    sock, context, tls_in_tls, server_hostname=server_hostname
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.7/ssl.py", line 423, in wrap_socket
+    session=session
+  File "/usr/local/lib/python3.7/ssl.py", line 870, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.7/ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(0, 'Error'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_youtube_api.py", line 123, in getDataToLocal
+    get_data()
+  File "/opt/airflow/dags/dag_youtube_api.py", line 117, in get_data
+    country_data = [",".join(header)] + get_pages(country_code)
+  File "/opt/airflow/dags/dag_youtube_api.py", line 97, in get_pages
+    video_data_page = api_request(next_page_token, country_code)
+  File "/opt/airflow/dags/dag_youtube_api.py", line 57, in api_request
+    request = requests.get(request_url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 547, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError(0, 'Error'))
+[2022-11-28T09:07:18.854+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=dag_youtube_api, task_id=getDataToLocal, execution_date=20221128T090048, start_date=20221128T090650, end_date=20221128T090718
+[2022-11-28T09:07:19.217+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 533 for task getDataToLocal (('Connection aborted.', OSError(0, 'Error')); 1835)
+[2022-11-28T09:07:19.309+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-11-28T09:07:19.768+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

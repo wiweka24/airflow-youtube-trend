@@ -1,0 +1,25 @@
+[2022-11-27T15:59:12.152+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_youtube_api.getDataToLocal manual__2022-11-27T15:59:10.006923+00:00 [queued]>
+[2022-11-27T15:59:12.165+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag_youtube_api.getDataToLocal manual__2022-11-27T15:59:10.006923+00:00 [queued]>
+[2022-11-27T15:59:12.166+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-27T15:59:12.166+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2022-11-27T15:59:12.167+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-27T15:59:12.191+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): getDataToLocal> on 2022-11-27 15:59:10.006923+00:00
+[2022-11-27T15:59:12.208+0000] {standard_task_runner.py:55} INFO - Started process 8347 to run task
+[2022-11-27T15:59:12.221+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_youtube_api', 'getDataToLocal', 'manual__2022-11-27T15:59:10.006923+00:00', '--job-id', '361', '--raw', '--subdir', 'DAGS_FOLDER/dag_youtube_api.py', '--cfg-path', '/tmp/tmpqkfxck0t']
+[2022-11-27T15:59:12.224+0000] {standard_task_runner.py:83} INFO - Job 361: Subtask getDataToLocal
+[2022-11-27T15:59:12.399+0000] {task_command.py:376} INFO - Running <TaskInstance: dag_youtube_api.getDataToLocal manual__2022-11-27T15:59:10.006923+00:00 [running]> on host 1977dd9b5152
+[2022-11-27T15:59:12.600+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_youtube_api
+AIRFLOW_CTX_TASK_ID=getDataToLocal
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-27T15:59:10.006923+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-27T15:59:10.006923+00:00
+[2022-11-27T15:59:12.605+0000] {logging_mixin.py:137} WARNING - usage: *** [-h] [--key_path KEY_PATH]
+               [--country_code_path COUNTRY_CODE_PATH]
+               [--output_dir OUTPUT_DIR]
+[2022-11-27T15:59:12.610+0000] {logging_mixin.py:137} WARNING - ***: error: unrecognized arguments: celery worker
+[2022-11-27T15:59:12.673+0000] {local_task_job.py:159} INFO - Task exited with return code 2
+[2022-11-27T15:59:12.724+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
