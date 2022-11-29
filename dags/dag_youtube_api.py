@@ -11,11 +11,9 @@ from operators.loadYtApiOperator import loadYtApiOperator
 default_args = {
     'owner': 'airflow',    
     #'start_date': airflow.utils.dates.days_ago(2),
-    # 'end_date': datetime(),
-    # 'depends_on_past': False,
-    #'email': ['airflow@example.com'],
-    #'email_on_failure': False,
-    # 'email_on_retry': False,
+    #'end_date': datetime(),
+    #'depends_on_past': False,
+
     # If a task fails, retry it once after waiting
     # at least 5 minutes
     'retries': 1,
@@ -39,12 +37,12 @@ extract = extractYtApiOperator(
             dag=dag)
 
 transform  = transformYtApiOperator(
-              task_id='transformYtApiOperator',
-              dag=dag)
+            task_id='transformYtApiOperator',
+            dag=dag)
 
 load = loadYtApiOperator(
-        task_id='loadYtApiOperator',
-        dag=dag)
+            task_id='loadYtApiOperator',
+            dag=dag)
 
 end = DummyOperator(task_id='stopExecution', dag=dag)
 
