@@ -2,6 +2,9 @@
 dags/__pycache__
 dags/dags_try
 
+# data
+data/kaggle_dl
+
 # all logs
 logs
 

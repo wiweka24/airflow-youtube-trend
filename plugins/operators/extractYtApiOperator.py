@@ -89,7 +89,7 @@ class extractYtApiOperator(BaseOperator):
             country_data = [",".join(header)] + get_pages(country_code)
             write_to_file(country_code, country_data)
 
-    output_dir = "/opt/airflow/data/"
+    output_dir = "/opt/airflow/data/api"
     api_key = "AIzaSyAyC91r6h-lGuNp6hq8mhcO0fpkx4LrO-k"
-    country_codes = ["ID", "EG", "GB"]
+    country_codes = ["ID", "MY", "SG", "EG", "GB"]
     get_data()

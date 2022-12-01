@@ -19,16 +19,17 @@ class loadYtApiOperator(BaseOperator):
       """
       )
 
-      data = pd.read_csv('/opt/airflow/data/' + tablename + '.csv')
+      data = pd.read_csv('/opt/airflow/data/api/' + tablename + '.csv')
       y = str(data["trending_date"][0])
 
       check = True
       myresult = testcursor.fetchall()
       for x in myresult:
-        z = x[0].replace('"', "")
+        z = x[0]
         if (z == y):
           check = False
       
+      print(check)
       return(check)
 
     def addtodb():
@@ -39,7 +40,7 @@ class loadYtApiOperator(BaseOperator):
       except Exception as error:
           print(error)
 
-      path = "/opt/airflow/data/*.csv"
+      path = "/opt/airflow/data/api/*.csv"
       glob.glob(path)
       for fname in glob.glob(path):
         fname = fname.split('/')
@@ -51,18 +52,18 @@ class loadYtApiOperator(BaseOperator):
         cursor = dbconnect.cursor()
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS youtube_""" + tablename + """ (
-                index varchar(500),
+                trending_no int,
                 video_id varchar(500), 
                 title varchar(500),
-                publishedAt varchar(500),
-                channelId varchar(500),
-                channelTitle varchar(500),
-                categoryId varchar(500),
-                trending_date varchar(500),
+                publishedAt date,
+                channelId varchar(50),
+                channelTitle varchar(200),
+                category int,
+                trending_date varchar(50),
                 tags varchar(500),
-                view_count varchar(500),
-                likes varchar(500),
-                comment_count varchar(500)
+                view_count int,
+                likes int,
+                comment_count int
             );
         """
         )
@@ -72,7 +73,7 @@ class loadYtApiOperator(BaseOperator):
         if(check):
           
           # insert each csv row as a record in our database
-          with open('/opt/airflow/data/' + tablename + '.csv', 'r') as f:
+          with open('/opt/airflow/data/api/' + tablename + '.csv', 'r') as f:
               next(f)  # skip the first row (header)     
               for row in f:
                   cursor.execute("""

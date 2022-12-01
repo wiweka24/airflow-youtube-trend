@@ -7,5 +7,7 @@ class YoutubePlugin(AirflowPlugin):
     operators = [
         operators.extractYtApiOperator,
         operators.transformYtApiOperator,
-        operators.loadYtApiOperator
+        operators.loadYtApiOperator,
+        operators.extractYtKaggleOperator,
+        operators.loadYtKaggleOperator
     ]
