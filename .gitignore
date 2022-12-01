@@ -1,0 +1,16 @@
+# dags chache
+dags/__pycache__
+dags/dags_try
+
+# data
+data/kaggle_dl
+
+# all logs
+logs
+
+# plugins cache
+plugins/__pycache__
+plugins/operators/__pycache__
+
+# environment
+.env
